@@ -242,7 +242,7 @@ class MazeView2D:
 
     def __colour_cell(self, cell, colour, transparency):
 
-        if self.__enable_render is False:
+        if self.__enable_render is False or cell is None:
             return
 
         if not (isinstance(cell, (list, tuple, np.ndarray)) and len(cell) == 2):

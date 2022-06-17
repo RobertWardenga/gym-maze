@@ -46,6 +46,9 @@ class MazeEnv(gym.Env):
         else:
             raise AttributeError("One must supply either a maze_file path (str) or the maze_size (tuple of length 2)")
 
+        if enable_render:
+            self.render()
+
         self.maze_size = self.maze_view.maze_size
 
         # forward or backward in each dimension
